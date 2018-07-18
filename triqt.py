@@ -89,8 +89,5 @@ class Instrument(trio.abc.Instrument):
                         nursery.start_soon(*self._tasks.popleft())
                     await trio.sleep(0)
                     self._app.processEvents()
-        except:
-            import traceback
-            traceback.print_exc()
         finally:
             self._app.exit()
