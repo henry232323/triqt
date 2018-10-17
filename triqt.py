@@ -23,6 +23,7 @@ import importlib
 
 logger = logging.getLogger('triqt')
 
+########### BEGIN IMPLEMENTATION DETECTION & IMPORT ###########
 try:
     QtModuleName = os.environ['QUAMASH_QTIMPL']
 except KeyError:
@@ -53,6 +54,8 @@ if QtModuleName == 'PyQt5':
 else:
     QApplication = QtGui.QApplication
 
+########### END IMPLEMENTATION DETECTION & IMPORT ###########
+    
 
 def _make_signaller(qtimpl_qtcore, *args):
     class Signaller(qtimpl_qtcore.QObject):
