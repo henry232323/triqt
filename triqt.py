@@ -58,6 +58,7 @@ else:
     
 
 def _make_signaller(qtimpl_qtcore, *args):
+    """Implementation independent Signal object"""
     class Signaller(qtimpl_qtcore.QObject):
         try:
             signal = qtimpl_qtcore.Signal(*args)
