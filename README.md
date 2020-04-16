@@ -1,5 +1,5 @@
 # triqt
-Run the Qt event loop from within the Trio event loop.
+Run the Qt event loop from within the [Trio](https://github.com/python-trio/trio) event loop.
 
 A simple way to use trio with your Python Qt application.
 To begin running the app
