@@ -25,7 +25,7 @@ logger = logging.getLogger('triqt')
 
 ########### BEGIN IMPLEMENTATION DETECTION & IMPORT ###########
 try:
-    QtModuleName = os.environ['QUAMASH_QTIMPL']
+    QtModuleName = os.environ['TRIQT_QTIMPL']
 except KeyError:
     QtModule = None
 else:
