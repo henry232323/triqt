@@ -91,7 +91,7 @@ class Instrument(trio.abc.Instrument):
                 while True:
                     if self._tasks:
                         nursery.start_soon(*self._tasks.popleft())
-                    await trio.sleep(0)
+                    await trio.sleep(0.05)
                     self._app.processEvents()
         finally:
             self._app.exit()
