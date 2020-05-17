@@ -10,7 +10,7 @@ README = (HERE / "README.md").read_text()
 # This call to setup() does all the work
 setup(
     name="triqt",
-    version="1.0.0",
+    version="1.0.1",
     description="Run the Qt event loop from within the Trio event loop",
     long_description=README,
     long_description_content_type="text/markdown",
